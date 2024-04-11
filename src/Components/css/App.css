@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
+body {
+  background-image: url("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Montserrat";
+}
+h1{
+  margin-top: 9%;
+}
+/* App.css */
+
+.cal {
+  margin-left: 30%;
+  background-color: #342d2dc1;
+  border-radius: 10px;
+  margin-top: 60%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 327px;
+}
+
+.cal .react-calendar__navigation {
+  background-color: #3498db;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.cal .react-calendar__month-view__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.cal .react-calendar__month-view__days__day {
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cal .react-calendar__month-view__days__day:hover,
+.cal .react-calendar__month-view__days__day--today {
+  background-color: #3498db;
+  color: white;
+}
+
+.cal .react-calendar__month-view__days__day:hover {
+  cursor: pointer;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.notes__title {
+  color: #fff;
+  font-size: 38px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+.notes {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+
+@media screen and (max-width: 900px) {
+  .notes {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .notes {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+}
